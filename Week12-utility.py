@@ -5,3 +5,18 @@
 
 def PrintOutput(x):
     print('OUTPUT ' + x)
+def LoadFile(x):
+    file = x
+    lines = open(file, "r")
+    lines_con = lines.readlines()
+    lines.close()
+    new_list = []
+    for x in lines_con:
+        y = ""
+        for letter in x:
+            if letter == "\n":
+                continue
+            else:
+                y += letter
+        new_list.append(y)
+    return new_list
