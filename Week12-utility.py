@@ -28,3 +28,11 @@ def UpdateString(string, letter, spot):
         else:
             new_string += string[x]
     print("OUTPUT", new_string)
+def FindWordCount(x, string):
+    list_words = x
+    checker = string
+    count = 0
+    for x in list_words:
+        if string in x:
+            count += 1
+    return count
