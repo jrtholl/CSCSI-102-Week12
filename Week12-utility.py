@@ -37,13 +37,17 @@ def FindWordCount(x, string):
             count += 1
     return count
 def ScoreFinder(list_1, list_2, name):
-    if name not in list_1:
-        print('OUTPUT player not found')
-    else:
+    count = 0
+    for y in list_1:
+        if name.lower() != y.lower():
+            count += 1
+    if count != len(list_1):
         for x in range(len(list_1)):
-            if name == list_1[x]:
+            if name.lower() == list_1[x].lower():
                 spot = x
         print('OUTPUT %s got a score of %d' %(name, list_2[spot]))
+    else:
+        print('OUTPUT player not found')
 def Union(list_1, list_2):
     new_list = list_1 + list_2
     return new_list
@@ -55,7 +59,7 @@ def Intersection(list_1, list_2):
     return new_list
 def NotIn(list_1, list_2):
     new_list = []
-    for x in list_2:
-        if x not in list_1:
+    for x in list_1:
+        if x not in list_2:
             new_list.append(x)
     return new_list
