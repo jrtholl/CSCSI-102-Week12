@@ -20,3 +20,11 @@ def LoadFile(x):
                 y += letter
         new_list.append(y)
     return new_list
+def UpdateString(string, letter, spot):
+    new_string = ""
+    for x in range(len(string)):
+        if x == spot:
+            new_string += letter
+        else:
+            new_string += string[x]
+    print("OUTPUT", new_string)
