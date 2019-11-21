@@ -44,3 +44,6 @@ def ScoreFinder(list_1, list_2, name):
             if name == list_1[x]:
                 spot = x
         print('OUTPUT %s got a score of %d' %(name, list_2[spot]))
+def Union(list_1, list_2):
+    new_list = list_1 + list_2
+    return new_list
