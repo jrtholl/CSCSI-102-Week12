@@ -28,13 +28,17 @@ def UpdateString(string, letter, spot):
         else:
             new_string += string[x]
     print("OUTPUT", new_string)
+# fix the FindWordCount
 def FindWordCount(x, string):
     list_words = x
     checker = string
     count = 0
-    for x in list_words:
-        if string in x:
-            count += 1
+    for spot in list_words:
+        list_words = spot.split()
+        for word in list_words:
+            print(word)
+            if string.lower() in word.lower():
+                count += 1
     return count
 def ScoreFinder(list_1, list_2, name):
     count = 0
