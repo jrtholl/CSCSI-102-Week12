@@ -36,7 +36,6 @@ def FindWordCount(x, string):
     for spot in list_words:
         list_words = spot.split()
         for word in list_words:
-            print(word)
             if string.lower() in word.lower():
                 count += 1
     return count
